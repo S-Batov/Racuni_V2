@@ -47,6 +47,7 @@
             this.mainFormLayoutTable = new System.Windows.Forms.TableLayoutPanel();
             this.dgv_klijenti = new System.Windows.Forms.DataGridView();
             this.dgv_stavke = new System.Windows.Forms.DataGridView();
+            this.tsm_odspojiSe = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.mainFormLayoutTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_klijenti)).BeginInit();
@@ -71,7 +72,8 @@
             this.tsm_upravljanjeBazom.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsm_klijenti,
             this.tsm_stavke,
-            this.tsm_spojiSe});
+            this.tsm_spojiSe,
+            this.tsm_odspojiSe});
             this.tsm_upravljanjeBazom.Name = "tsm_upravljanjeBazom";
             this.tsm_upravljanjeBazom.Size = new System.Drawing.Size(117, 20);
             this.tsm_upravljanjeBazom.Text = "Upravljanje bazom";
@@ -137,6 +139,7 @@
             this.tsm_spojiSe.Name = "tsm_spojiSe";
             this.tsm_spojiSe.Size = new System.Drawing.Size(180, 22);
             this.tsm_spojiSe.Text = "Spoji se s bazom";
+            this.tsm_spojiSe.Click += new System.EventHandler(this.tsm_spojiSe_Click);
             // 
             // tsm_dodajKlijentaNaRacun
             // 
@@ -205,6 +208,14 @@
             this.dgv_stavke.Size = new System.Drawing.Size(394, 207);
             this.dgv_stavke.TabIndex = 1;
             // 
+            // tsm_odspojiSe
+            // 
+            this.tsm_odspojiSe.Enabled = false;
+            this.tsm_odspojiSe.Name = "tsm_odspojiSe";
+            this.tsm_odspojiSe.Size = new System.Drawing.Size(180, 22);
+            this.tsm_odspojiSe.Text = "Odspoji se od baze";
+            this.tsm_odspojiSe.Click += new System.EventHandler(this.tsm_odspojiSe_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,6 +258,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsm_ispisiSveRaune;
         private System.Windows.Forms.DataGridView dgv_klijenti;
         private System.Windows.Forms.DataGridView dgv_stavke;
+        private System.Windows.Forms.ToolStripMenuItem tsm_odspojiSe;
     }
 }
 
